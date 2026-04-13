@@ -17,3 +17,5 @@ python-docx
 unstructured
 pandas
 langchain-pinecone
+torch
+torchvision

@@ -12,6 +12,12 @@ from langchain_huggingface import HuggingFaceEmbeddings
 # ================================
 # pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
 
+try:
+    import streamlit as st
+    groq_api = st.secrets["GROQ_API_KEY"]
+except:
+    groq_api = os.getenv("GROQ_API_KEY")
+
 def get_secret(key):
     try:
         import streamlit as st
