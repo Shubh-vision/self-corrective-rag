@@ -1,0 +1,13 @@
+Self-RAG
+.Self-RAG
+Self-RAG/
+app.py
+_pycache_
+__pycache__/
+*.pyc
+*.db
+*.sqlite3
+*.faiss
+*.pkl
+.vscode/
+.env
