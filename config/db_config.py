@@ -1,9 +1,10 @@
 import psycopg2
 import socket
+import streamlit as st
 
 
 def get_connection():
-    host = "db.fsjhbqnzefptdzbkrjck.supabase.co"
+    host = st.secrets["SUPABASE_DB_HOST"]
 
     # Force IPv4 resolution
     ipv4 = socket.getaddrinfo(host, 5432, socket.AF_INET)[0][4][0]
