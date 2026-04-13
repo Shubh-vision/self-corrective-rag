@@ -20,3 +20,4 @@ langchain-pinecone
 torch
 torchvision
 psycopg2-binary
+supabase
