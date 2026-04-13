@@ -15,7 +15,7 @@ def get_connection():
         conn = psycopg2.connect(
             host=ipv4,
             database="postgres",
-            user="postgres",
+            user="postgres.fsjhbqnzefptdzbkrjck",
             password=st.secrets["SUPABASE_DB_PASSWORD"],  # 🔐 move to secrets
             port=5432,
             sslmode="require"
