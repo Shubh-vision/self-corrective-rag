@@ -1,8 +1,18 @@
 from config.db_config import get_connection
 import os
 
-host = os.getenv("SUPABASE_DB_HOST")
-password = os.getenv("SUPABASE_DB_PASSWORD")
+# host = os.getenv("SUPABASE_DB_HOST")
+# password = os.getenv("SUPABASE_DB_PASSWORD")
+
+import os
+
+try:
+    import streamlit as st
+    SUPABASE_URL = st.secrets["SUPABASE_URL"]
+    SUPABASE_KEY = st.secrets["SUPABASE_KEY"]
+except:
+    SUPABASE_URL = os.getenv("SUPABASE_URL")
+    SUPABASE_KEY = os.getenv("SUPABASE_KEY")
 
 
 #=============================================SAVE MEMORY==================================================================================

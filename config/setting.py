@@ -10,7 +10,18 @@ from langchain_huggingface import HuggingFaceEmbeddings
 # ================================
 # INIT PINECONE
 # ================================
-pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
+# pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
+
+def get_secret(key):
+    try:
+        import streamlit as st
+        if key in st.secrets:
+            return st.secrets[key]
+    except:
+        pass
+    return os.getenv(key)
+
+pc = Pinecone(api_key=get_secret("PINECONE_API_KEY"))
 
 INDEX_NAME = "hybrid-search-langchain-pinecone"
 
