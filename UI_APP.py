@@ -174,6 +174,7 @@ else:
             st.session_state.result = new_result
             # 🔥 FIX: Reset feedback BEFORE rerun
             st.session_state.feedback = None
+            
             st.rerun()
 
         # ================= SUMMARY =================
